@@ -1,0 +1,21 @@
+{
+  "name": "moshavere-va-azmoon-printables",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:pdf": "node scripts/build-pdfs.mjs"
+  },
+  "devDependencies": {
+    "@fontsource-variable/ibm-plex-sans": "5.3.0",
+    "@fontsource-variable/jetbrains-mono": "5.3.0",
+    "@fontsource-variable/space-grotesk": "5.3.0",
+    "@fontsource-variable/vazirmatn": "5.3.0",
+    "@sparticuz/chromium": "153.0.0",
+    "@tailwindcss/container-queries": "0.1.1",
+    "@tailwindcss/forms": "0.5.11",
+    "fflate": "0.8.2",
+    "pdf-lib": "1.17.1",
+    "puppeteer-core": "25.13.0",
+    "tailwindcss": "3.4.17"
+  }
+}
