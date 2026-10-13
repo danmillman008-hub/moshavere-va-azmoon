@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>پوستر چاپی ۵۰×۷۰ — مشاوره کنکور</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#121316;
+    --paper:#F4F4F0;
+    --white:#fff;
+    --hair:#D8D8D2;
+    --red:#FF3B30;
+    --blue:#0055FF;
+    --font:"Vazirmatn","IRANSans","Vazir",Tahoma,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#cfcfc9;font-family:var(--font);display:flex;flex-direction:column;align-items:center;padding:28px 12px 60px;gap:14px;direction:rtl}
+  .hint{background:#fff;border:1px solid var(--hair);padding:10px 16px;font-size:14px;line-height:1.9;max-width:900px}
+  .hint b{color:var(--ink)}
+  /* 50x70 cm  =>  5:7  =>  1000 x 1400 px mock */
+  .poster{
+    width:1000px;height:1400px;background:var(--paper);color:var(--ink);
+    border:1px solid var(--ink);display:flex;flex-direction:column;overflow:hidden;
+  }
+  .head{
+    background:var(--ink);color:#fff;padding:34px 48px;display:flex;align-items:center;justify-content:space-between;
+  }
+  .logo{font-size:64px;font-weight:900;line-height:1;border-left:3px solid rgba(255,255,255,.35);padding-left:22px}
+  .brand-sub{font-size:22px;font-weight:600;line-height:1.6}
+  .brand-sub small{display:block;font-size:16px;opacity:.75;font-weight:400;margin-top:4px}
+  .content{flex:1;display:flex;flex-direction:column;padding:46px 48px 0;gap:28px}
+  h1{font-size:82px;font-weight:900;line-height:1.25;letter-spacing:-2px}
+  h1 .hl{background:var(--red);color:#fff;padding:2px 14px;display:inline-block}
+  .lead{font-size:28px;font-weight:600;line-height:1.8;color:#2f3036}
+  .bar{height:3px;background:var(--ink)}
+  .cta-title{font-size:22px;font-weight:900;letter-spacing:1px;color:#6a6a6a}
+  .services{border:2px solid var(--ink);display:grid;grid-template-columns:1fr 1fr}
+  .services div{
+    padding:20px 22px;font-size:26px;font-weight:600;line-height:1.5;
+    border-bottom:1px solid var(--hair);display:flex;gap:12px;align-items:flex-start;
+  }
+  .services div:nth-child(odd){border-left:1px solid var(--hair)}
+  .services div:nth-last-child(-n+2){border-bottom:0}
+  .services .ck{color:var(--blue);font-weight:900}
+  .offer{background:var(--red);color:#fff;padding:26px 32px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+  .offer .big{font-size:36px;font-weight:900;line-height:1.4}
+  .offer .side{text-align:left;font-size:20px;font-weight:700;line-height:1.7}
+  .foot{
+    background:var(--white);border-top:2px solid var(--ink);padding:28px 48px;
+    display:flex;align-items:center;justify-content:space-between;gap:28px;
+  }
+  .foot .lines{display:flex;flex-direction:column;gap:8px}
+  .foot .line{font-size:30px;font-weight:800;display:flex;gap:12px;align-items:center}
+  .foot .lbl{font-size:16px;font-weight:600;color:#6a6a6a;min-width:96px}
+  .qr{
+    width:132px;height:132px;border:2px solid var(--ink);display:grid;place-items:center;flex:0 0 auto;
+    background:
+      repeating-linear-gradient(45deg,#000 0 7px,transparent 7px 14px),
+      repeating-linear-gradient(-45deg,#000 0 7px,transparent 7px 14px);
+  }
+  .qr span{background:#fff;border:1px solid var(--ink);font-size:13px;font-weight:800;color:#777;padding:4px 6px;text-align:center;line-height:1.5}
+  @page{size:50cm 70cm;margin:0}
+  @media print{
+    body{background:#fff;padding:0}
+    .hint{display:none}
+    .poster{width:100%;height:100vh;border:none}
+  }
+</style>
+</head>
+<body>
+  <div class="hint">
+    <b>پوستر آماده‌ی چاپ ۵۰×۷۰ سانتی‌متر.</b> برای گرفتن خروجی: <b>Ctrl+P</b> → مقصد «Save as PDF» → اندازه‌ی کاغذ را روی
+    <b>Custom 50cm × 70cm</b> بگذار. برای اسکرین‌شات سریع همان‌طور که هست کپی بگیر.<br>
+    جای <b>@yourid</b>، <b>۰۹۱۲–۰۰۰–۰۰۰۰</b> و کادر <b>QR</b> را با اطلاعات واقعی گروه عوض کن.
+  </div>
+
+  <section class="poster">
+    <header class="head">
+      <div class="logo">قله</div>
+      <div class="brand-sub">
+        گروه مشاوره و برنامه‌ریزی کنکور
+        <small>تجربی · ریاضی · انسانی · هنر</small>
+      </div>
+    </header>
+
+    <div class="content">
+      <h1>رتبه، تصادفی نیست؛<br><span class="hl">ساخته می‌شود.</span></h1>
+      <div class="lead">
+        مسیر کنکور را با یک تیم حرفه‌ای برو: مشاوره‌ی تخصصی، برنامه‌ی شخصی و پیگیری روزانه — از اولین روز تا لحظه‌ی انتخاب رشته.
+      </div>
+      <div class="bar"></div>
+
+      <div class="cta-title">خدمات ما</div>
+      <div class="services">
+        <div><span class="ck">✔</span><span>مشاوره با رتبه‌های برتر کنکور</span></div>
+        <div><span class="ck">✔</span><span>برنامه‌ریزی هفتگی شخصی‌سازی‌شده</span></div>
+        <div><span class="ck">✔</span><span>تحلیل دقیق آزمون و کارنامه</span></div>
+        <div><span class="ck">✔</span><span>آموزش تست‌زنی و مدیریت زمان</span></div>
+        <div><span class="ck">✔</span><span>معرفی منابع و روش مطالعه</span></div>
+        <div><span class="ck">✔</span><span>پیگیری روزانه و گزارش‌کار</span></div>
+        <div><span class="ck">✔</span><span>مشاوره‌ی انگیزشی و مدیریت استرس</span></div>
+        <div><span class="ck">✔</span><span>انتخاب رشته و هدایت تحصیلی</span></div>
+      </div>
+
+      <div class="offer">
+        <div class="big">🎁 جلسه‌ی اول مشاوره رایگان</div>
+        <div class="side">ظرفیت هر مشاور محدود است<br>رزرو زودهنگام</div>
+      </div>
+    </div>
+
+    <footer class="foot">
+      <div class="lines">
+        <div class="line"><span class="lbl">تماس</span> ۰۹۱۲–۰۰۰–۰۰۰۰</div>
+        <div class="line"><span class="lbl">تلگرام</span> @yourid</div>
+        <div class="line"><span class="lbl">آدرس</span> [نام شهر] — [آدرس آموزشگاه]</div>
+      </div>
+      <div class="qr"><span>اسکن کن<br>و رزرو کن</span></div>
+    </footer>
+  </section>
+</body>
+</html>

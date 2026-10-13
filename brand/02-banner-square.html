@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>بنرهای تبلیغاتی — مشاوره کنکور</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#121316;
+    --paper:#F4F4F0;
+    --white:#ffffff;
+    --line:#121316;
+    --hair:#D8D8D2;
+    --red:#FF3B30;
+    --blue:#0055FF;
+    --green:#00875A;
+    --font:"Vazirmatn","IRANSans","Vazir",Tahoma,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    background:#dadad6;
+    font-family:var(--font);
+    padding:32px 16px 80px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:16px;
+    direction:rtl;
+  }
+  .hint{
+    font-size:14px;color:#3a3a3a;background:#fff;border:1px solid var(--hair);
+    padding:10px 16px;max-width:1080px;line-height:1.9;border-radius:0;
+  }
+  .hint b{color:var(--ink)}
+  .artboard{
+    background:var(--paper);
+    color:var(--ink);
+    border:1px solid var(--ink);
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+  }
+  .tag{
+    font-size:13px;font-weight:800;letter-spacing:.5px;color:#555;
+    align-self:flex-start;margin-bottom:-6px;
+  }
+  /* ---------- artboard sizes ---------- */
+  .square{width:1080px;height:1080px}
+  .story{width:1080px;height:1920px}
+  .wide{width:1200px;height:628px}
+  @media (max-width:1180px){
+    .square,.story,.wide{width:92vw;height:auto;min-height:auto}
+  }
+
+  /* ---------- shared pieces ---------- */
+  .topbar{
+    background:var(--ink);color:#fff;display:flex;align-items:center;
+    justify-content:space-between;padding:22px 40px;gap:20px;
+  }
+  .brandmark{display:flex;align-items:baseline;gap:14px}
+  .brandmark .logo{
+    font-size:44px;font-weight:900;line-height:1;letter-spacing:-1px;
+    border-left:2px solid rgba(255,255,255,.35);padding-left:16px;
+  }
+  .brandmark .sub{font-size:17px;font-weight:600;opacity:.9}
+  .topbar .pill{
+    font-size:15px;font-weight:800;border:1.5px solid #fff;padding:8px 16px;white-space:nowrap;
+  }
+  .body{flex:1;display:flex;flex-direction:column;padding:44px 40px 0;gap:26px}
+  h1.head{
+    font-size:74px;font-weight:900;line-height:1.22;letter-spacing:-1.5px;
+  }
+  h1.head .hl{
+    background:var(--red);color:#fff;padding:0 12px;display:inline-block;
+  }
+  .subhead{font-size:26px;font-weight:600;line-height:1.7;color:#33343a;max-width:900px}
+  .rule{height:2px;background:var(--ink);width:100%}
+  .services{display:grid;grid-template-columns:1fr 1fr;border:1.5px solid var(--line)}
+  .services .item{
+    display:flex;gap:12px;align-items:flex-start;
+    padding:18px 20px;font-size:23px;font-weight:600;line-height:1.5;
+    border-bottom:1px solid var(--hair);
+  }
+  .services .item:nth-child(odd){border-left:1px solid var(--hair)}
+  .services .item .ck{color:var(--blue);font-weight:900}
+  .offer{
+    background:var(--red);color:#fff;display:flex;align-items:center;justify-content:space-between;
+    padding:22px 28px;gap:16px;
+  }
+  .offer .big{font-size:34px;font-weight:900}
+  .offer .small{font-size:19px;font-weight:600;opacity:.95}
+  .footer{
+    border-top:2px solid var(--ink);padding:22px 40px;display:flex;align-items:center;
+    justify-content:space-between;gap:24px;background:var(--white);
+  }
+  .contact{display:flex;flex-direction:column;gap:6px}
+  .contact .line{font-size:26px;font-weight:800;display:flex;gap:10px;align-items:center}
+  .contact .line .lbl{font-size:15px;font-weight:600;color:#6a6a6a}
+  .qr{
+    width:112px;height:112px;border:2px solid var(--ink);display:grid;place-items:center;
+    font-size:13px;font-weight:800;color:#8a8a8a;text-align:center;line-height:1.5;
+    background:
+      repeating-linear-gradient(45deg,#000 0 6px,transparent 6px 12px),
+      repeating-linear-gradient(-45deg,#000 0 6px,transparent 6px 12px);
+    position:relative;
+  }
+  .qr span{background:var(--white);padding:4px 6px;border:1px solid var(--ink)}
+
+  /* story extras */
+  .story h1.head{font-size:82px}
+  .steps{display:flex;flex-direction:column;border:1.5px solid var(--line)}
+  .step{display:flex;align-items:center;gap:18px;padding:22px 24px;border-bottom:1px solid var(--hair);font-size:26px;font-weight:600}
+  .step:last-child{border-bottom:0}
+  .step .num{
+    font-family:ui-monospace,Menlo,Consolas,monospace;font-weight:900;font-size:30px;
+    background:var(--ink);color:#fff;width:56px;height:56px;display:grid;place-items:center;flex:0 0 auto;
+  }
+
+  /* wide banner */
+  .wide .body{padding:34px 40px 0;gap:18px}
+  .wide h1.head{font-size:52px}
+  .wide .subhead{font-size:22px}
+  .cta{
+    background:var(--ink);color:#fff;font-size:26px;font-weight:900;padding:16px 30px;
+    display:inline-block;align-self:flex-start;
+  }
+  @media print{
+    body{background:#fff;padding:0;gap:24px}
+    .hint,.tag{display:none}
+    .artboard{border:none}
+  }
+</style>
+</head>
+<body>
+
+  <div class="hint">
+    <b>راهنما:</b> از هر بنر یک اسکرین‌شات بگیر (در ویندوز: <b>Win+Shift+S</b> — در مک: <b>Cmd+Shift+4</b>) یا در کروم
+    <b>Ctrl+P</b> بزن و «ذخیره به‌صورت PDF» بگیر.<br>
+    برای جایگزینی متن‌ها: عبارت <b>@yourid</b> و <b>۰۹۱۲–۰۰۰–۰۰۰۰</b> و کادر <b>QR</b> را با اطلاعات واقعی خودت عوض کن.
+  </div>
+
+  <!-- ============ 1) POST 1080x1080 ============ -->
+  <div class="tag">۱) بنر مربعی اینستاگرام / تلگرام — ۱۰۸۰×۱۰۸۰</div>
+  <section class="artboard square">
+    <div class="topbar">
+      <div class="brandmark">
+        <div class="logo">قله</div>
+        <div class="sub">گروه مشاوره و برنامه‌ریزی کنکور</div>
+      </div>
+      <div class="pill">ثبت‌نام فصل جدید</div>
+    </div>
+
+    <div class="body">
+      <h1 class="head">رتبه، تصادفی نیست؛<br><span class="hl">ساخته می‌شود.</span></h1>
+      <div class="subhead">مشاوره‌ی تخصصی کنکور + برنامه‌ریزی شخصی‌سازی‌شده، هفته‌به‌هفته تا روز کنکور.</div>
+      <div class="rule"></div>
+
+      <div class="services">
+        <div class="item"><span class="ck">✔</span><span>مشاوره با رتبه‌های برتر</span></div>
+        <div class="item"><span class="ck">✔</span><span>برنامه‌ریزی هفتگی اختصاصی</span></div>
+        <div class="item"><span class="ck">✔</span><span>تحلیل آزمون و کارنامه</span></div>
+        <div class="item"><span class="ck">✔</span><span>تکنیک تست‌زنی و مدیریت زمان</span></div>
+        <div class="item"><span class="ck">✔</span><span>معرفی منابع و روش مطالعه</span></div>
+        <div class="item"><span class="ck">✔</span><span>پیگیری روزانه تا شب کنکور</span></div>
+      </div>
+
+      <div class="offer">
+        <div>
+          <div class="big">🎁 جلسه‌ی اول مشاوره رایگان</div>
+          <div class="small">ظرفیت هر مشاور محدود است — رزرو زودهنگام توصیه می‌شود.</div>
+        </div>
+        <div class="small">۰۹۱۲–۰۰۰–۰۰۰۰</div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="contact">
+        <div class="line"><span class="lbl">تماس و واتساپ</span> ۰۹۱۲–۰۰۰–۰۰۰۰</div>
+        <div class="line"><span class="lbl">تلگرام</span> @yourid</div>
+      </div>
+      <div class="qr"><span>QR کانال</span></div>
+    </div>
+  </section>
+
+  <!-- ============ 2) STORY 1080x1920 ============ -->
+  <div class="tag">۲) استوری اینستاگرام / بنر عمودی چاپی — ۱۰۸۰×۱۹۲۰</div>
+  <section class="artboard story">
+    <div class="topbar">
+      <div class="brandmark">
+        <div class="logo">قله</div>
+        <div class="sub">مشاوره‌ی تخصصی کنکور</div>
+      </div>
+      <div class="pill">۱۴۰۶ / ۱۴۰۷</div>
+    </div>
+
+    <div class="body">
+      <h1 class="head">تو تلاش می‌کنی،<br><span class="hl">ما مسیر را نشان می‌دهیم.</span></h1>
+      <div class="subhead">یک برنامه‌ی درست، یک مشاور که پیگیرت باشد، یک تحلیل که بگوید کجای مسیر می‌لنگی.</div>
+      <div class="rule"></div>
+
+      <div class="steps">
+        <div class="step"><div class="num">۰۱</div><div>مشاوره‌ی اختصاصی رشته‌ی خودت (تجربی / ریاضی / انسانی / هنر)</div></div>
+        <div class="step"><div class="num">۰۲</div><div>برنامه‌ی هفتگی، بر اساس سطح و ساعت مطالعه‌ی خودت</div></div>
+        <div class="step"><div class="num">۰۳</div><div>تحلیل خط‌به‌خط کارنامه و آزمون‌های آزمایشی</div></div>
+        <div class="step"><div class="num">۰۴</div><div>پیگیری روزانه + گزارش‌کار شبانه</div></div>
+        <div class="step"><div class="num">۰۵</div><div>انتخاب رشته و هدایت تحصیلی، تا آخر مسیر</div></div>
+      </div>
+
+      <div class="offer">
+        <div>
+          <div class="big">🎁 جلسه‌ی اول رایگان</div>
+          <div class="small">تحلیل کارنامه‌ی آزمون اول، مهمان ما.</div>
+        </div>
+        <div class="small">ظرفیت محدود</div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="contact">
+        <div class="line"><span class="lbl">رزرو</span> ۰۹۱۲–۰۰۰–۰۰۰۰</div>
+        <div class="line"><span class="lbl">تلگرام</span> @yourid</div>
+      </div>
+      <div class="qr"><span>QR کانال</span></div>
+    </div>
+  </section>
+
+  <!-- ============ 3) WIDE 1200x628 ============ -->
+  <div class="tag">۳) بنر افقی سایت / تلگرام — ۱۲۰۰×۶۲۸</div>
+  <section class="artboard wide">
+    <div class="topbar" style="padding:16px 34px">
+      <div class="brandmark">
+        <div class="logo" style="font-size:34px">قله</div>
+        <div class="sub" style="font-size:15px">مشاوره و برنامه‌ریزی کنکور</div>
+      </div>
+      <div class="pill" style="font-size:13px;padding:6px 12px">۰۹۱۲–۰۰۰–۰۰۰۰</div>
+    </div>
+
+    <div class="body">
+      <h1 class="head">از امروز تا کارنامه، یک تیم کنارت است.</h1>
+      <div class="subhead">مشاوره با رتبه‌های برتر + برنامه‌ریزی هفتگی + تحلیل آزمون + پیگیری روزانه</div>
+      <div class="cta">مشاوره‌ی رایگان بگیر &nbsp;←</div>
+    </div>
+
+    <div class="offer" style="padding:14px 34px">
+      <div class="small" style="font-weight:800">🎁 جلسه‌ی اول رایگان</div>
+      <div class="small">تلگرام: @yourid</div>
+    </div>
+  </section>
+
+</body>
+</html>
